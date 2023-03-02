@@ -1,5 +1,7 @@
-import {React, useState} from "react";
-import './App.css';
+import Boton from "./components/Boton";
+import {useState} from "react";
+import "./App.css"
+
 
 function App() {
 
@@ -16,17 +18,16 @@ function App() {
   const restar = () => {
     setCont(cont-1);
   }
-
+  
   return (
     <>
       <h1>contador</h1>
       <h2>{cont}</h2>
-      <button onClick={sum}>Aumentar</button>
-      <button onClick={reset}>Reset</button>
-      <button onClick={restar}>Diminuir</button>
-
+      <Boton manexador={sum} texto={"Aumento"}/>
+      <Boton manexador={reset} texto={"Resetea"}/>
+      <Boton manexador={restar} texto={"Decremento"}/>
     </>
-  );
+  )
 }
 
 export default App;
